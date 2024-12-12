@@ -3,6 +3,7 @@ package com.edfapg.sdk.views.edfacardpay
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import androidx.fragment.app.Fragment
 import com.edfapg.sdk.model.request.order.EdfaPgSaleOrder
 import com.edfapg.sdk.model.request.payer.EdfaPgPayer
@@ -42,6 +43,7 @@ class EdfaCardPay {
     }
 
     fun initialize(context:Context, onError:(Any) -> Unit, onPresent:(Activity) -> Unit){
+        Log.e("initialize","initialize")
         _onError = onError
         _onPresent = onPresent
 
@@ -49,6 +51,7 @@ class EdfaCardPay {
     }
 
     fun intent(context:Context, onError:(Any) -> Unit, onPresent:(Activity) -> Unit) : Intent {
+        Log.e("intent","intent")
         _onError = onError
         _onPresent = onPresent
 
